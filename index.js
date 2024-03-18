@@ -31,6 +31,7 @@ app.use(express.json());
 // app.use(FileUpload());
 // app.use(express.static('public'));
 app.use(userRoute);
+app.use(productRoute);
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
