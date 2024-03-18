@@ -3,6 +3,7 @@ import cors from 'cors';
 import db from './config/database.js';
 import userRoute from './routes/userRoute.js';
 // import Users from './models/userModel.js';
+import productRoute from './routes/productRoute.js'
 import dotenv from 'dotenv';
 import cookieParser from 'cookie-parser';
 
@@ -14,6 +15,7 @@ try {
   await db.authenticate();
   console.log('Database connected!');
   //   await Users.sync();
+ 
 } catch (error) {
   console.log(error);
 }
