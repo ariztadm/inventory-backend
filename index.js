@@ -6,6 +6,7 @@ import userRoute from './routes/userRoute.js';
 import productRoute from './routes/productRoute.js'
 import dotenv from 'dotenv';
 import cookieParser from 'cookie-parser';
+import FileUpload from 'express-fileupload';
 
 dotenv.config();
 const app = express();
@@ -28,8 +29,8 @@ app.use(
 );
 app.use(cookieParser());
 app.use(express.json());
-// app.use(FileUpload());
-// app.use(express.static('public'));
+app.use(FileUpload());
+app.use(express.static('public'));
 app.use(userRoute);
 app.use(productRoute);
 
